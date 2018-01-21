@@ -6,7 +6,7 @@
             "type": "Ruby",
             "request": "attach",
             "remotePort": "1234",
-            "remoteHost": "0.0.0.0",
+            "remoteHost": "127.0.0.1",
             "remoteWorkspaceRoot": "/app",
             "cwd": "${workspaceRoot}",
             "showDebuggerOutput": true

@@ -25,7 +25,7 @@ WORKDIR /app
 # have to bundle install to run rdebug-ide
 # have to bundle install --binstubs --path vendor/bundle for sinatra
 # TODO clean this up so only have to run one
-RUN cd /app; bundle install; bundle install --binstubs --path vendor/bundle
+CMD bundle install && bundle exec rdebug-ide --host 0.0.0.0 --port 1234 -- bin/rackup --host 0.0.0.0 -p 4567
 
 # command/CMD is now in the docker-compose
 
