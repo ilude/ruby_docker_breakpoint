@@ -6,7 +6,7 @@ I have tested this with Docker for Mac 1.12.3 Stable.
 
 Start by cloning the repository
 
-    git clone https://github.com/aaronblythe/ruby_docker_breakpoint.git
+    git clone https://github.com/ilude/ruby_docker_breakpoint.git
     cd ruby_docker_breakpoint
     # Open Visual Studio Code
     code .
@@ -29,7 +29,7 @@ It will wait here until you Navigate the to Debug View in Visual Studio Code and
     hellorubyvscode_1  | [2016-11-29 21:15:46] INFO  ruby 2.1.10 (2016-04-01) [x86_64-linux]
     hellorubyvscode_1  | [2016-11-29 21:15:46] INFO  WEBrick::HTTPServer#start: pid=1 port=4567
 
-From here set a breakpoint in the code in myapp.rb.  Then navigate to http://0.0.0.0:4567
+From here set a breakpoint in the code in myapp.rb.  Then navigate to http://localhost:4567
 
 You should now hit the breakpoint and be able to step over or step into or play.
 
@@ -61,7 +61,7 @@ To be able to access sinatra from outside container need to do this:
 
     CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "4568"]
 
-then navigate to http://0.0.0.0/4568 in your browser
+then navigate to http://localhost/4568 in your browser
 
 From:  http://stackoverflow.com/questions/30027248/running-ruby-sinatra-inside-a-docker-container-not-able-to-connect-via-mac-host
 
